@@ -262,24 +262,6 @@ void shootLaser(int frame){
          }
     }   
 }
-/*---------Check Bullet Hit Laser-------------*/
-void checkBulletHit(){
-  for (int i=0; i<bList.length-1; i++) {
-    Bullet bullet = bList[i];
-     for (int j=0; j<lList.length-1; j++) {
-     Laser laser = lList[j];
-      if (bullet != null && laser != null && !bullet.gone && !laser.gone ){// Check Array isn't empty and bullet /laser still exist
-        if(bullet.bX > laser.lX - laser.lSize/2 &&
-           bullet.bX < laser.lX + laser.lSize/2 &&
-           bullet.bY > laser.lY - laser.lSize/2 &&
-           bullet.bY < laser.lY + laser.lSize/2){
-             removeBullet(bList[i]);
-             removeLaser(lList[j]);
-           }
-      }
-     }
-  }
-}
 /*---------Check Laser Hit Ship-------------*/
 void checkShipHit() {
   for (int i=0; i<lList.length-1; i++) {
