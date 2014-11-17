@@ -68,7 +68,6 @@ void draw() {
     shootLaser(50);
     checkAlienDead();/*finish this function*/
     checkShipHit();  /*finish this function*/
-    checkBulletHit();
     countBulletFrame+=1;
     checkRubyDrop(200);
     checkRubyCatch();;
